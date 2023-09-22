@@ -5,7 +5,7 @@ namespace App\Http\Resource\Admin;
 use App\Http\Dto\Config\SalesmanDto;
 use App\Model\Config;
 use App\Model\Member;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class SalesmanUserCollection extends BaseCollection
 {

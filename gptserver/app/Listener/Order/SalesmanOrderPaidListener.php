@@ -28,7 +28,7 @@ class SalesmanOrderPaidListener implements ListenerInterface
      * @return void
      * @throws \Throwable
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         // 判断是否符合分销条件
         /* @var SalesmanDto $config */

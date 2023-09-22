@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Resource\Admin;
 
 use App\Model\ChatGptModel;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 use Hyperf\Utils\Arr;
 
 class ChatGptModelCollection extends BaseCollection

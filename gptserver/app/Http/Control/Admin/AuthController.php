@@ -4,7 +4,7 @@ namespace App\Http\Control\Admin;
 
 use App\Http\Request\Admin\LoginRequest;
 use App\Http\Service\AdminService;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class AuthController extends BaseController

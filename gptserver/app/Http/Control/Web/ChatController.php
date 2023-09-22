@@ -13,7 +13,7 @@ use App\Job\GptModelUsesJob;
 use App\Model\ChatGptModel;
 use App\Model\Config;
 use App\Model\MemberPackage;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\Di\Annotation\Inject;
 
 class ChatController extends BaseController

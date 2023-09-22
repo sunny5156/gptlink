@@ -4,10 +4,9 @@ declare (strict_types=1);
 namespace App\Model;
 
 use App\Model\Repository\MaterialTrait;
-use Cblink\ModelLibrary\Hyperf\PageableTrait;
-use Cblink\ModelLibrary\Hyperf\SearchableTrait;
+use Aimilink\ModelLibrary\Hyperf\PageableTrait;
+use Aimilink\ModelLibrary\Hyperf\SearchableTrait;
 use Hyperf\DbConnection\Model\Model;
-
 class Material extends Model
 {
     use MaterialTrait, SearchableTrait, PageableTrait;
@@ -16,17 +15,17 @@ class Material extends Model
      *
      * @var string
      */
-    protected $table = 'material';
+    protected ?string $table = 'material';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['type', 'title', 'file_url', 'size', 'format', 'width', 'height', 'content'];
+    protected array $fillable = ['type', 'title', 'file_url', 'size', 'format', 'width', 'height', 'content'];
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [];
+    protected array $casts = [];
 }

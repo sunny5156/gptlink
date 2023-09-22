@@ -3,7 +3,7 @@
 namespace App\Http\Control\Common;
 
 use App\Model\Material;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\Context\Context;
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;

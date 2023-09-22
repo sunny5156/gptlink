@@ -6,7 +6,7 @@ use App\Base\Consts\ModelConst;
 use App\Http\Dto\Config\AiChatConfigDto;
 use App\Http\Service\ChatGPTService;
 use Carbon\Carbon;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 use Gioni06\Gpt3Tokenizer\Gpt3Tokenizer;
 use Psr\SimpleCache\InvalidArgumentException;
 
@@ -20,7 +20,7 @@ use Psr\SimpleCache\InvalidArgumentException;
  */
 class ChatDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'model',
         'message',
         'system',
@@ -37,12 +37,12 @@ class ChatDto extends Dto
         'format_after',
     ];
 
-    public function formatAfter()
+    public function formatAfter(): mixed
     {
         return $this->getItem('format_after', '');
     }
 
-    public function formatBefore()
+    public function formatBefore(): mixed
     {
         return $this->getItem('format_before', '');
     }
@@ -50,7 +50,7 @@ class ChatDto extends Dto
     /**
      * @return array
      */
-    public function toGPTLink(AiChatConfigDto $config)
+    public function toGPTLink(AiChatConfigDto $config): array
     {
         $system = $this->getItem('system') ?: $config->default_system_prompt;
 
@@ -66,7 +66,7 @@ class ChatDto extends Dto
         ];
     }
 
-    public function toOpenAi(AiChatConfigDto $config)
+    public function toOpenAi(AiChatConfigDto $config): array
     {
         return [
             'model' => $config->openai_model,
@@ -85,7 +85,7 @@ class ChatDto extends Dto
      * @throws \Psr\Container\NotFoundExceptionInterface
      * @throws \Psr\SimpleCache\InvalidArgumentException
      */
-    public function getMessage(AiChatConfigDto $config)
+    public function getMessage(AiChatConfigDto $config): array
     {
         $messages = [];
 
@@ -114,7 +114,7 @@ class ChatDto extends Dto
      * @return void
      * @throws InvalidArgumentException
      */
-    public function getLastMessages(AiChatConfigDto $configDto, $lastId, array &$messages = [], int $totalTokens = 0, int $count = 8)
+    public function getLastMessages(AiChatConfigDto $configDto, $lastId, array &$messages = [], int $totalTokens = 0, int $count = 8): void
     {
         if (! $lastId || ! $message = cache()->get('chat-'. $lastId)) {
             return;
@@ -151,7 +151,7 @@ class ChatDto extends Dto
      * @throws \Psr\Container\NotFoundExceptionInterface
      * @throws \Psr\SimpleCache\InvalidArgumentException
      */
-    public function cached($id, $result)
+    public function cached($id, $result): void
     {
         if (!$id) {
             return;

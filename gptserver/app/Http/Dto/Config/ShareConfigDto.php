@@ -3,14 +3,14 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  *
  */
 class ShareConfigDto extends Dto implements ConfigDtoInterface
 {
-    protected $fillable = ['type', 'title', 'desc', 'img_url', 'share_img'];
+    protected array $fillable = ['type', 'title', 'desc', 'img_url', 'share_img'];
 
     /**
      * 默认数据

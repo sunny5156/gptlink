@@ -6,8 +6,9 @@ namespace Hyperf\HttpMessage\Server\Connection;
 use Hyperf\HttpMessage\Server\Chunk\Chunkable;
 use Hyperf\HttpMessage\Server\ConnectionInterface;
 use Swoole\Http\Response;
+use Hyperf\Engine\Contract\Http\Writable;
 
-class SwooleConnection implements ConnectionInterface, Chunkable
+abstract class SwooleConnection implements Writable, Chunkable
 {
     /**
      * @var Response

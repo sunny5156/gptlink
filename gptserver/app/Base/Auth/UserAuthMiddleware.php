@@ -8,5 +8,5 @@ use Qbhy\HyperfAuth\AuthMiddleware;
 
 class UserAuthMiddleware extends AuthMiddleware
 {
-    protected $guards = ['user'];
+    protected array $guards = ['user'];
 }

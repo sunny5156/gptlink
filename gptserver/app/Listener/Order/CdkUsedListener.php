@@ -21,7 +21,7 @@ class CdkUsedListener implements ListenerInterface
      * @param CdkUsedEvent $event
      * @return void
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         $package = Package::findOrFail($event->cdk->package_id);
 

@@ -7,7 +7,7 @@ use App\Http\Request\Admin\ImageRequest;
 use App\Http\Request\QiniuRequest;
 use App\Http\Service\QiniuService;
 use App\Model\Material;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class UploadController extends BaseController

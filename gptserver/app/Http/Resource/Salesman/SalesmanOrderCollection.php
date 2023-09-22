@@ -3,7 +3,7 @@
 namespace App\Http\Resource\Salesman;
 
 use App\Model\SalesmanOrder;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class SalesmanOrderCollection extends BaseCollection
 {

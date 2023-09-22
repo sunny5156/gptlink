@@ -4,7 +4,7 @@ namespace App\Http\Request\Salesman;
 
 use App\Http\Request\BaseFormRequest;
 use App\Model\Withdraw;
-use Cblink\HyperfExt\Rules\MobileRule;
+use Aimilink\HyperfExt\Rules\MobileRule;
 use Hyperf\Validation\Rule;
 
 class WithdrawalApplyRequest extends BaseFormRequest

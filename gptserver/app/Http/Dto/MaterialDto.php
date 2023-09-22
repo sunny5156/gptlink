@@ -2,7 +2,7 @@
 
 namespace App\Http\Dto;
 
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 use Hyperf\Utils\Str;
 
 /**
@@ -15,9 +15,9 @@ use Hyperf\Utils\Str;
  */
 class MaterialDto extends Dto
 {
-    protected $fillable = ['title', 'file_url', 'size', 'content', 'width', 'height'];
+    protected array $fillable = ['title', 'file_url', 'size', 'content', 'width', 'height'];
 
-    public function getCreateData()
+    public function getCreateData(): array
     {
         [$string, $content] = explode(",", $this->getItem('content'));
 

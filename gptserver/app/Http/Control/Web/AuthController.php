@@ -13,7 +13,7 @@ use App\Http\Request\Web\UserResetRequest;
 use App\Http\Service\SmsService;
 use App\Model\Config;
 use App\Model\Member;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 use Psr\SimpleCache\InvalidArgumentException;
 

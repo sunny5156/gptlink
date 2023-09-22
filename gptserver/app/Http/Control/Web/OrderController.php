@@ -17,7 +17,7 @@ use App\Model\MemberOauth;
 use App\Model\Order;
 use App\Model\Package;
 use Carbon\Carbon;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use EasyWeChat\Kernel\Exceptions\InvalidArgumentException;
 use EasyWeChat\Kernel\Exceptions\InvalidConfigException;
 use GuzzleHttp\Exception\GuzzleException;

@@ -5,7 +5,7 @@ namespace App\Http\Control\Admin;
 use App\Base\Consts\StatisticsConst;
 use App\Http\Request\Admin\StatisticsRequest;
 use App\Http\Service\StatisicsService;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\Utils\Arr;
 
 class StatisticsController extends BaseController

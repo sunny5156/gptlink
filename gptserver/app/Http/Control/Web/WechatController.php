@@ -8,8 +8,8 @@ use App\Http\Service\WechatService;
 use App\Http\Dto\OauthDto;
 use App\Http\Service\MemberOauthService;
 use App\Model\Config;
-use Cblink\Hyperf\Socialite\Contracts\SocialiteInterface;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\Hyperf\Socialite\Contracts\SocialiteInterface;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 

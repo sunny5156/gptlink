@@ -7,7 +7,7 @@ use App\Http\Dto\Config\AiChatConfigDto;
 use Hyperf\Utils\Arr;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
-use Swoole\Http2\Request;
+use Swoole\Http\Request;
 
 class OpenaiChatCompletionsRequest extends Request implements RequestInterface
 {

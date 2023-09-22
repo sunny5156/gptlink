@@ -4,7 +4,6 @@ namespace App\Model\Repository;
 
 use App\Http\Dto\MaterialDto;
 use App\Model\Material;
-
 trait MaterialTrait
 {
     /**

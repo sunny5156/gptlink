@@ -22,7 +22,7 @@ class UserRegisterTaskListener implements ListenerInterface
     /**
      * @param UserRegisterTaskEvent $event
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         // 用户 id
         $userId = $event->userId;
@@ -59,7 +59,7 @@ class UserRegisterTaskListener implements ListenerInterface
      *
      * @param $userId
      */
-    protected function registerTask($userId)
+    protected function registerTask($userId): void
     {
         Task::completion(Task::TYPE_REGISTER, $userId);
     }
@@ -69,7 +69,7 @@ class UserRegisterTaskListener implements ListenerInterface
      *
      * @param $parentId
      */
-    protected function inviteTask($parentId)
+    protected function inviteTask($parentId): void
     {
         // 邀请好友任务
         logger()->info('user-register-event-invite', [

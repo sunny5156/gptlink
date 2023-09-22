@@ -4,7 +4,7 @@ namespace App\Http\Resource;
 
 use App\Http\Service\WechatPayService;
 use App\Model\Order;
-use Cblink\HyperfExt\BaseResource;
+use Aimilink\HyperfExt\BaseResource;
 
 /**
  * @property Order $resource

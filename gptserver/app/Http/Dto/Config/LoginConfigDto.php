@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property  int $login_type 登录方式
@@ -18,7 +18,7 @@ class LoginConfigDto extends Dto implements ConfigDtoInterface
         self::LOGIN_TYPE_WECHAT => '微信登陆',
     ];
 
-    protected $fillable = ['type', 'login_type', 'mobile_verify'];
+    protected array $fillable = ['type', 'login_type', 'mobile_verify'];
 
     /**
      * 默认数据

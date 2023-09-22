@@ -4,7 +4,7 @@ namespace App\Http\Control\Web;
 
 use App\Http\Request\Admin\ModelShowRequest;
 use App\Http\Service\GPTLinkImageService;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use GuzzleHttp\Exception\GuzzleException;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

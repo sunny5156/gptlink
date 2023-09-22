@@ -5,7 +5,7 @@ namespace App\Http\Control\Web;
 use App\Http\Request\Web\ChatGptModelIndexRequest;
 use App\Http\Resource\ChatGptModelCollection;
 use App\Model\ChatGptModel;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class ChatGptModelController extends BaseController
 {

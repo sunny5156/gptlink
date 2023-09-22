@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Resource\Admin;
 
 use App\Model\MemberOauth;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class MemberOauthCollection extends BaseCollection
 {

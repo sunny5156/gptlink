@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Order;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 use Hyperf\Snowflake\IdGeneratorInterface;
 
 /**
@@ -11,7 +11,7 @@ use Hyperf\Snowflake\IdGeneratorInterface;
  */
 class OrderDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'trade_no',
         'user_id',
         'price',
@@ -22,7 +22,7 @@ class OrderDto extends Dto
         'payload',
     ];
 
-    public function toData()
+    public function toData(): array
     {
         return [
             'trade_no' => $this->getItem('trade_no'),
@@ -41,7 +41,7 @@ class OrderDto extends Dto
     /**
      * @return int
      */
-    public static function generate()
+    public static function generate(): int
     {
         return make(IdGeneratorInterface::class)->generate();
     }

@@ -6,21 +6,21 @@ use App\Exception\ErrCode;
 use App\Exception\LogicException;
 use App\Http\Dto\ChatDto;
 use App\Http\Dto\Config\AiChatConfigDto;
-use Swoole\Http2\Request;
+use Swoole\Http\Request;
 
 class ChatCompletionsRequest extends Request implements RequestInterface
 {
-    public $path = '/v1/chat/completions';
+    public string $path = '/v1/chat/completions';
 
-    public $method = 'POST';
+    public string $method = 'POST';
 
-    public $headers;
+    public array $headers;
 
-    public $cookies;
+    public array $cookies;
 
-    public $data = '';
+    public string $data = '';
 
-    public $pipeline = false;
+    public bool $pipeline = false;
 
     public $debug;
 

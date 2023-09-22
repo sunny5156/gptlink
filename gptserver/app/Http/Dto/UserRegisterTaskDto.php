@@ -2,7 +2,7 @@
 
 namespace App\Http\Dto;
 
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $parent_code 父级 code
@@ -10,7 +10,7 @@ use Cblink\HyperfExt\Dto;
  */
 class UserRegisterTaskDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'parent_code', 'member_id'
     ];
 

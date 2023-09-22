@@ -5,7 +5,6 @@ namespace App\Model\Repository;
 use App\Event\SalesmanOrderCreateEvent;
 use App\Http\Dto\SalesmanOrderDto;
 use App\Model\SalesmanOrder;
-
 trait SalesmanOrderTrait
 {
     /**
@@ -16,9 +15,7 @@ trait SalesmanOrderTrait
     {
         /* @var SalesmanOrder $salesmanOrder */
         $salesmanOrder = SalesmanOrder::query()->create($dto->toModel());
-
         event(new SalesmanOrderCreateEvent($salesmanOrder));
-
         return $salesmanOrder;
     }
 }

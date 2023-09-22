@@ -9,7 +9,7 @@ use App\Http\Request\Admin\TaskStoreRequest;
 use App\Http\Resource\Admin\TaskCollection;
 use App\Http\Resource\Admin\TaskResource;
 use App\Model\Task;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class TaskController extends BaseController
 {

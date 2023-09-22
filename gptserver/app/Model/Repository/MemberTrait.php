@@ -7,7 +7,6 @@ use App\Http\Dto\WithdrawalDto;
 use App\Job\UserRegisterRecordJob;
 use App\Model\Member;
 use App\Model\Withdraw;
-
 trait MemberTrait
 {
     /**
@@ -17,13 +16,10 @@ trait MemberTrait
     public static function createByDto(MemberDto $dto)
     {
         $member = Member::query()->create($dto->getData());
-
         // 如果存在分享 share_openid 需要触发
         asyncQueue(new UserRegisterRecordJob($member->id, $dto->share_openid));
-
         return $member;
     }
-
     /**
      * 申请提现
      *
@@ -33,10 +29,8 @@ trait MemberTrait
     public function applyWithdrawal(WithdrawalDto $dto)
     {
         $this->decrement('balance', $dto->price);
-
         return Withdraw::query()->create($dto->toModel($this->id));
     }
-
     /**
      * 设置分销员
      *
@@ -46,10 +40,8 @@ trait MemberTrait
     {
         $this->identity = Member::IDENTITY_SALESMAN;
         $this->save();
-
         return $this;
     }
-
     /**
      * 登陆信息
      *
@@ -57,20 +49,8 @@ trait MemberTrait
      */
     public function getLoginInfo()
     {
-        return [
-            'user' => [
-                'openid' => $this->code,
-                'nickname' => $this->nickname,
-                'avatar' => $this->avatar,
-                'status' => $this->status,
-                'identity' => $this->identity,
-            ],
-            'token_type' => 'Bearer',
-            'access_token' => auth('user')->login($this),
-            'expire_in' => config('auth.guards.user.ttl'),
-        ];
+        return ['user' => ['openid' => $this->code, 'nickname' => $this->nickname, 'avatar' => $this->avatar, 'status' => $this->status, 'identity' => $this->identity], 'token_type' => 'Bearer', 'access_token' => auth('user')->login($this), 'expire_in' => config('auth.guards.user.ttl')];
     }
-
     /**
      * 修改状态
      *
@@ -82,7 +62,6 @@ trait MemberTrait
         $this->update(['status' => $status]);
         return $this->refresh();
     }
-
     /**
      * 修改密码
      *
@@ -94,7 +73,6 @@ trait MemberTrait
         $this->password = sha1($password);
         $this->save();
     }
-
     /**
      * 验证密码
      *

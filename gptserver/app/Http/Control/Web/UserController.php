@@ -18,7 +18,7 @@ use App\Model\Member;
 use App\Model\MemberPackage;
 use App\Model\MemberPackageRecord;
 use App\Model\Order;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class UserController extends BaseController

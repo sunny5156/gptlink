@@ -6,7 +6,7 @@ use App\Http\Dto\Config\SalesmanDto;
 use App\Model\Config;
 use App\Model\Member;
 use App\Model\SalesmanOrder;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class SalesmanController extends BaseController

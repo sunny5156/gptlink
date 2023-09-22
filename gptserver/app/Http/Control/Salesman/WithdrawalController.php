@@ -9,7 +9,7 @@ use App\Http\Request\Salesman\WithdrawalApplyRequest;
 use App\Http\Resource\Salesman\withdrawalCollection;
 use App\Model\Member;
 use App\Model\Withdraw;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class WithdrawalController extends BaseController

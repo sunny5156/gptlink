@@ -6,7 +6,7 @@ namespace App\Http\Request\Web;
 use App\Http\Request\BaseFormRequest;
 use App\Model\Order;
 use App\Model\Package;
-use Cblink\HyperfExt\Rules\MobileRule;
+use Aimilink\HyperfExt\Rules\MobileRule;
 use Hyperf\Validation\Rule;
 
 class SendSmsRequest extends BaseFormRequest

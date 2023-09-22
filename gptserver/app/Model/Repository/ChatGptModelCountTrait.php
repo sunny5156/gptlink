@@ -2,9 +2,7 @@
 
 namespace App\Model\Repository;
 
-
 use App\Model\ChatGptModelCount;
-
 trait ChatGptModelCountTrait
 {
     /**
@@ -17,7 +15,7 @@ trait ChatGptModelCountTrait
     public static function deleteCache(int $memberId)
     {
         $key = sprintf('%s%s', ChatGptModelCount::USER_MODEL_CACHE_COUNT, $memberId);
-        if(cache()->has($key)){
+        if (cache()->has($key)) {
             cache()->delete($key);
         }
     }

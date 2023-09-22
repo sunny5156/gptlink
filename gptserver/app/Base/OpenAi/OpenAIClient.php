@@ -141,7 +141,7 @@ class OpenAIClient
                 AiChatConfigDto::OPENAI => function () {
                     if (! empty($this->config->openai_host)) {
                         $host = parse_url($this->config->openai_host);
-                        $port = (int) $host['port'] ?: ($host['scheme'] == 'https' ? 443: 80);
+                        $port = isset($host['port']) ?: ($host['scheme'] == 'https' ? 443: 80);
                         return [$host['host'], $port, $port == 443];
                     }
                     return ['api.openai.com', 443, true];

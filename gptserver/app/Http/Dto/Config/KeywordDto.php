@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property bool $enable
@@ -11,7 +11,7 @@ use Cblink\Dto\Dto;
  */
 class KeywordDto extends Dto implements ConfigDtoInterface
 {
-    protected $fillable = ['type', 'enable', 'keywords'];
+    protected array $fillable = ['type', 'enable', 'keywords'];
 
     /**
      * 默认数据

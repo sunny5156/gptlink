@@ -6,7 +6,7 @@ use App\Exception\ErrCode;
 use App\Exception\LogicException;
 use App\Http\Request\Admin\ConfigStoreRequest;
 use App\Model\Config;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class ConfigController extends BaseController
 {

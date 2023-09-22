@@ -11,7 +11,7 @@ use App\Http\Service\MemberOauthService;
 use App\Http\Service\SmsService;
 use App\Model\Config;
 use App\Model\MemberOauth;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 use Psr\SimpleCache\InvalidArgumentException;
 

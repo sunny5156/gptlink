@@ -4,7 +4,7 @@ namespace App\Http\Control\Hook;
 
 use App\Http\Service\WechatPayService;
 use App\Model\Order;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use EasyWeChat\Kernel\Exceptions\InvalidArgumentException;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Symfony\Component\HttpFoundation\Response;

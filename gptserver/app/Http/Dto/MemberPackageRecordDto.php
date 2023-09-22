@@ -2,11 +2,11 @@
 
 namespace App\Http\Dto;
 
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 class MemberPackageRecordDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'user_id',
         'package_id',
         'package_name',
@@ -17,7 +17,7 @@ class MemberPackageRecordDto extends Dto
         'num',
     ];
 
-    public function toData()
+    public function toData(): array
     {
         return [
             'user_id' => $this->getItem('user_id'),

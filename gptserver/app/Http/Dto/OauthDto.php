@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Member;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 use Hyperf\Utils\Str;
 
 /**
@@ -16,7 +16,7 @@ use Hyperf\Utils\Str;
  */
 class OauthDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'nickname',
         'avatar',
         'openid',
@@ -32,7 +32,7 @@ class OauthDto extends Dto
     /**
      * @return array
      */
-    public function getOauthData($memberId = 0)
+    public function getOauthData($memberId = 0): array
     {
         return [
             'member_id' => $memberId ?: 0,

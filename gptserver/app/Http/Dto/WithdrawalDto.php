@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Withdraw;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 use Hyperf\Snowflake\IdGeneratorInterface;
 
 /**
@@ -11,11 +11,11 @@ use Hyperf\Snowflake\IdGeneratorInterface;
  */
 class WithdrawalDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'price', 'channel', 'config',
     ];
 
-    public function toModel($userId)
+    public function toModel($userId): array
     {
         return [
             'serial_no' => make(IdGeneratorInterface::class)->generate(),

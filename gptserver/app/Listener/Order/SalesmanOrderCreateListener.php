@@ -25,7 +25,7 @@ class SalesmanOrderCreateListener implements ListenerInterface
      * @param SalesmanOrderCreateEvent $event
      * @return void
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         $event->order->price;
 

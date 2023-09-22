@@ -6,7 +6,6 @@ use App\Event\OrderCreateEvent;
 use App\Event\OrderPaidEvent;
 use App\Http\Dto\OrderDto;
 use App\Model\Order;
-
 trait OrderTrait
 {
     /**
@@ -18,12 +17,9 @@ trait OrderTrait
     public static function createByDto(OrderDto $orderDto)
     {
         $order = Order::query()->create($orderDto->toData());
-
         event(new OrderCreateEvent($order));
-
         return $order;
     }
-
     /**
      * @return bool
      */
@@ -31,7 +27,6 @@ trait OrderTrait
     {
         return $this->status == Order::STATUS_PAID;
     }
-
     /**
      * 付款金额
      *
@@ -45,8 +40,6 @@ trait OrderTrait
         $this->paid_no = $paidNo;
         $this->status = Order::STATUS_PAID;
         $this->save();
-
         event(new OrderPaidEvent($this));
     }
-
 }

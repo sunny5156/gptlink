@@ -11,7 +11,7 @@ return [
             'mixin',
         ],
         'class_map' => [
-            \Hyperf\HttpMessage\Server\Connection\SwooleConnection::class => BASE_PATH . '/app/Base/ClassMap/SwooleConnection.php',
+            // \Hyperf\HttpMessage\Server\Connection\SwooleConnection::class => BASE_PATH . '/app/Base/ClassMap/SwooleConnection.php',
         ],
     ],
 ];

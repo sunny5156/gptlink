@@ -6,7 +6,7 @@ use App\Http\Dto\Config\AiChatConfigDto;
 use App\Http\Dto\Config\SmsConfigDto;
 use App\Http\Service\GPTLinkChatService;
 use App\Model\Config;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 

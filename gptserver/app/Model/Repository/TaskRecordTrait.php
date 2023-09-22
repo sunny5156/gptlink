@@ -2,10 +2,8 @@
 
 namespace App\Model\Repository;
 
-
 use App\Http\Dto\TaskRecordDto;
 use App\Model\TaskRecord;
-
 trait TaskRecordTrait
 {
     /**
@@ -16,7 +14,6 @@ trait TaskRecordTrait
     {
         return TaskRecord::query()->create($dto->getFillableData());
     }
-
     /**
      * @param $isRead
      * @return TaskRecord
@@ -26,6 +23,4 @@ trait TaskRecordTrait
         $this->update(['is_read' => $isRead]);
         return $this->refresh();
     }
-
-
 }

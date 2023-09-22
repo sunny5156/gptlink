@@ -6,7 +6,7 @@ namespace App\Http\Resource;
 
 use App\Base\BaseRemoteCollection;
 use App\Model\ChatGptModel;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class ChatGptModelCollection extends BaseCollection
 {

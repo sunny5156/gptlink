@@ -8,7 +8,7 @@ use App\Http\Resource\Admin\PackageCollection;
 use App\Http\Resource\Admin\PackageResource;
 use App\Model\Order;
 use App\Model\Package;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class PackageController extends BaseController

@@ -10,7 +10,7 @@ use App\Exception\FailReturnException;
 use App\Exception\RemoteException;
 use App\Exception\Traits\ExceptionHandlerTrait;
 use App\Exception\UserDisableException;
-use Cblink\HyperfExt\Traits\CorsTrait;
+use Aimilink\HyperfExt\Traits\CorsTrait;
 use Hyperf\Database\Model\ModelNotFoundException;
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Exception\HttpException;
@@ -20,6 +20,9 @@ use Hyperf\Validation\ValidationException;
 use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 use Psr\Http\Message\ResponseInterface;
 use Qbhy\HyperfAuth\Exception\AuthException;
+use Throwable;
+use Hyperf\Contract\StdoutLoggerInterface;
+use Hyperf\HttpMessage\Stream\SwooleStream;
 
 class AppExceptionHandler extends ExceptionHandler
 {
@@ -32,9 +35,20 @@ class AppExceptionHandler extends ExceptionHandler
         FailReturnException::class,
     ];
 
-    public function handle(\Throwable $throwable, ResponseInterface $response)
+
+    public function handle(Throwable $throwable, ResponseInterface $response)
     {
+        // $request = make(RequestInterface::class);
+        // print_r($request);
+
+        // print_r($response);
+
+        // print_r("---------------------------------------------------------------------------------\n");
         $response = $this->corsResponse($request = make(RequestInterface::class), $response);
+        // $response = $this->corsResponse($request, $response);
+
+        // print_r("---------------------------------------------------------------------------------\n");
+        // print_r($throwable);
 
         // 记录错误日志
         if (! $this->shouldntReport($throwable)) {
@@ -96,7 +110,7 @@ class AppExceptionHandler extends ExceptionHandler
     /**
      * @return bool
      */
-    public function shouldntReport(\Throwable $throwable)
+    public function shouldntReport(Throwable $throwable)
     {
         foreach ($this->expectExceptions as $exception) {
             if ($throwable instanceof $exception) {
@@ -107,8 +121,9 @@ class AppExceptionHandler extends ExceptionHandler
         return false;
     }
 
-    public function isValid(\Throwable $throwable): bool
+    public function isValid(Throwable $throwable): bool
     {
         return true;
+        // return $throwable instanceof HttpException;
     }
 }

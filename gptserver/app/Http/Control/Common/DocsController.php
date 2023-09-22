@@ -2,7 +2,7 @@
 
 namespace App\Http\Control\Common;
 
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\Context\Context;
 use Hyperf\HttpMessage\Stream\SwooleStream;
 use Psr\Http\Message\ResponseInterface;

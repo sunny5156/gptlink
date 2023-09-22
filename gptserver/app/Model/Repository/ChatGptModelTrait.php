@@ -12,7 +12,6 @@ use App\Model\ChatGptModelRecord;
 use App\Model\GptModelCollect;
 use Hyperf\DbConnection\Db;
 use Hyperf\Utils\Arr;
-
 trait ChatGptModelTrait
 {
     /**
@@ -25,7 +24,6 @@ trait ChatGptModelTrait
         ChatGptModelCount::query()->create(['chat_gpt_model_id' => $chatGptModel->id]);
         return $chatGptModel;
     }
-
     /**
      * @param ChatGptModelDto $dto
      * @return ChatGptModel
@@ -35,7 +33,6 @@ trait ChatGptModelTrait
         $this->update($dto->getUpdateData());
         return $this->refresh();
     }
-
     /**
      * @param int $status
      * @return ChatGptModel
@@ -45,7 +42,6 @@ trait ChatGptModelTrait
         $this->update(['status' => $status]);
         return $this->refresh();
     }
-
     /**
      * 删除模型
      *
@@ -55,10 +51,8 @@ trait ChatGptModelTrait
     public function destroyModel()
     {
         ChatGptModelCount::query()->where('chat_gpt_model_id', $this->id)->delete();
-
         $this->delete();
     }
-
     /**
      * 排序
      *

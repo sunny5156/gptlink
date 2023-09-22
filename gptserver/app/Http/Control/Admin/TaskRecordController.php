@@ -4,7 +4,7 @@ namespace App\Http\Control\Admin;
 
 use App\Http\Resource\Admin\TaskRecordCollection;
 use App\Model\TaskRecord;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class TaskRecordController extends BaseController
 {

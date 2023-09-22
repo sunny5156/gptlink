@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Task;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 use Hyperf\Validation\Rule;
 
 /**
@@ -17,11 +17,11 @@ use Hyperf\Validation\Rule;
  */
 class TaskDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'type', 'title', 'desc', 'platform', 'share_image', 'rule', 'package_id'
     ];
 
-    public function getFillableData()
+    public function getFillableData(): array
     {
         return [
             'title' => $this->getItem('title'),
@@ -33,7 +33,7 @@ class TaskDto extends Dto
         ];
     }
 
-    public function whereByType()
+    public function whereByType(): array
     {
         return [
             'type' => $this->getItem('type'),

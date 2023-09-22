@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property string $channel  渠道
@@ -25,7 +25,7 @@ class AiChatConfigDto extends Dto implements ConfigDtoInterface
     const GPTLINK = 'gptlink';
     const OPENAI = 'openai';
 
-    protected $fillable = [
+    protected array $fillable = [
         'type',
         'channel',
         'default_system_prompt',
@@ -85,7 +85,7 @@ class AiChatConfigDto extends Dto implements ConfigDtoInterface
     /**
      * @return string
      */
-    public function getOpenAiKey()
+    public function getOpenAiKey(): string
     {
         $keys = explode("\n", $this->getItem('openai_key'));
 
@@ -101,4 +101,5 @@ class AiChatConfigDto extends Dto implements ConfigDtoInterface
             'type' => $this->getItem('type', Config::AI_CHAT),
         ];
     }
+
 }

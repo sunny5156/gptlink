@@ -9,7 +9,7 @@ use App\Http\Resource\Admin\ChatGptModelCollection;
 use App\Http\Resource\Admin\ChatGptModelResource;
 use App\Model\ChatGptModel;
 use App\Model\GptModelCollect;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 

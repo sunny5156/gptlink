@@ -6,7 +6,7 @@ namespace App\Http\Resource\Admin;
 
 use App\Model\Cdk;
 use Carbon\Carbon;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class CdkListCollection extends BaseCollection
 {

@@ -4,7 +4,7 @@ namespace App\Http\Resource\Admin;
 
 use App\Model\Material;
 use App\Model\Member;
-use Cblink\HyperfExt\BaseResource;
+use Aimilink\HyperfExt\BaseResource;
 
 /**
  * @property Material $resource

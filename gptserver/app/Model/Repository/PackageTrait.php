@@ -12,7 +12,6 @@ use App\Model\Package;
 use App\Model\Task;
 use Hyperf\Database\Model\Builder;
 use Hyperf\Database\Model\Model;
-
 trait PackageTrait
 {
     /**
@@ -24,7 +23,6 @@ trait PackageTrait
     {
         return (int) bcmul((string) $this->price, '100');
     }
-
     /**
      * 给用户发放套餐包
      *
@@ -34,50 +32,21 @@ trait PackageTrait
      */
     public function sendToUser($userId, int $channel = MemberPackage::CHANNEL_ORDER)
     {
-        $dto = new MemberPackageDto([
-            'code' => $this->code,
-            'name' => $this->show_name,
-            'channel' => $channel,
-            'identity' => $this->identity,
-            'type' => $this->type,
-            'num' => $this->num,
-            'level' => $this->level,
-            'expired_day' => $this->expired_day,
-        ]);
-
+        $dto = new MemberPackageDto(['code' => $this->code, 'name' => $this->show_name, 'channel' => $channel, 'identity' => $this->identity, 'type' => $this->type, 'num' => $this->num, 'level' => $this->level, 'expired_day' => $this->expired_day]);
         // 赠送套餐
         $result = MemberPackage::updateByDto($userId, $dto);
         // 增加记录
         MemberPackageRecord::createByPackageDto($userId, $this->id, $dto);
-
         return $result;
     }
-
     public function destroyPackage()
     {
-        $packageRecord = MemberPackageRecord::query()
-            ->where('package_id', $this->id)
-            ->exists();
-
-        throw_if(
-            $packageRecord,
-            LogicException::class,
-            ErrCode::PACKAGE_IS_BIND_USER
-        );
-
-        $task = Task::query()
-            ->where('package_id', $this->id)
-            ->count();
-
-        throw_if(
-            $task,
-            LogicException::class,
-            ErrCode::PACKAGE_IS_BIND_TASK
-        );
-
+        $packageRecord = MemberPackageRecord::query()->where('package_id', $this->id)->exists();
+        throw_if($packageRecord, LogicException::class, ErrCode::PACKAGE_IS_BIND_USER);
+        $task = Task::query()->where('package_id', $this->id)->count();
+        throw_if($task, LogicException::class, ErrCode::PACKAGE_IS_BIND_TASK);
         $this->delete();
     }
-
     /**
      * @param PackageDto $dto
      * @return Package|Builder|Model
@@ -86,7 +55,6 @@ trait PackageTrait
     {
         return Package::query()->create($dto->toData());
     }
-
     /**
      * 编辑
      *
@@ -96,7 +64,6 @@ trait PackageTrait
     public function updateByDto(PackageDto $dto)
     {
         $this->update($dto->getUpdateData());
-
         return $this->refresh();
     }
     /**

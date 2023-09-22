@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $client_id appid
@@ -12,7 +12,7 @@ use Cblink\HyperfExt\Dto;
  */
 class WechatWebDto extends Dto implements ConfigDtoInterface
 {
-	protected $fillable = [
+	protected array $fillable = [
 		'client_id', 'type', 'client_secret'
 	];
 

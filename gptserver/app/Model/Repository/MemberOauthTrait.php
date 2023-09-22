@@ -4,7 +4,6 @@ namespace App\Model\Repository;
 
 use App\Http\Dto\OauthDto;
 use App\Model\MemberOauth;
-
 trait MemberOauthTrait
 {
     /**
@@ -13,18 +12,12 @@ trait MemberOauthTrait
      */
     public static function findOrcreateByDto(OauthDto $dto)
     {
-        $oauth = MemberOauth::query()->where([
-            'platform' => $dto->platform,
-            'openid' => $dto->openid,
-        ])->first();
-
-        if (! $oauth) {
+        $oauth = MemberOauth::query()->where(['platform' => $dto->platform, 'openid' => $dto->openid])->first();
+        if (!$oauth) {
             $oauth = MemberOauth::query()->create($dto->getOauthData());
         }
-
         return $oauth;
     }
-
     /**
      * 修改用户 id
      *

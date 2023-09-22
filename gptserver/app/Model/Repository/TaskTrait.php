@@ -2,14 +2,12 @@
 
 namespace App\Model\Repository;
 
-
 use App\Event\TaskRecordEvent;
 use App\Http\Dto\TaskDto;
 use App\Model\Task;
 use App\Model\TaskRecord;
 use Carbon\Carbon;
 use Hyperf\Utils\Arr;
-
 trait TaskTrait
 {
     /**
@@ -20,7 +18,6 @@ trait TaskTrait
     {
         return Task::query()->updateOrCreate($dto->whereByType(), $dto->getFillableData());
     }
-
     /**
      * @param int $status
      * @return Task
@@ -30,7 +27,6 @@ trait TaskTrait
         $this->update(['status' => $status]);
         return $this->refresh();
     }
-
     /**
      * 触发任务
      *
@@ -41,10 +37,7 @@ trait TaskTrait
     public static function completion(string $type, int $userId, $skipCheck = false)
     {
         /** @var Task $task */
-        $task = Task::query()->where([
-            'type' => $type,
-            'status' => Task::STATUS_ON
-        ])->with(['package'])->first();
+        $task = Task::query()->where(['type' => $type, 'status' => Task::STATUS_ON])->with(['package'])->first();
         if (!$task || !Arr::get($task, 'package')) {
             return false;
         }
@@ -56,7 +49,6 @@ trait TaskTrait
         }
         return $checkRes;
     }
-
     /**
      * 验证任务完成
      *
@@ -80,5 +72,4 @@ trait TaskTrait
         }
         return $checkRes;
     }
-
 }

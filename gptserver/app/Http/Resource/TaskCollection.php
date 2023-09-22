@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Resource;
 
 use App\Model\Task;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 use Hyperf\Utils\Arr;
 
 class TaskCollection extends BaseCollection

@@ -57,7 +57,7 @@ trait ExceptionHandlerTrait
      * @param RequestInterface $request
      * @return false|void
      */
-    public function logger(\Throwable $throwable, $request)
+    public function logger(\Throwable $throwable, RequestInterface $request)
     {
         logger('exception')->info('exception', [
             'req' => $request->all(),

@@ -2,7 +2,7 @@
 
 namespace App\Base;
 
-use Cblink\HyperfExt\Traits\ApiResponse;
+use Aimilink\HyperfExt\Traits\ApiResponse;
 use Hyperf\Resource\Json\ResourceCollection;
 use Psr\Http\Message\ResponseInterface;
 

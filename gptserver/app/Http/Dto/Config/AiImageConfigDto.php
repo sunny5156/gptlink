@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * Class AiImageConfigDto
@@ -14,7 +14,7 @@ use Cblink\Dto\Dto;
  */
 class AiImageConfigDto extends Dto implements ConfigDtoInterface
 {
-    protected $fillable = [
+    protected array $fillable = [
         'type', 'gptlink_key', 'channel'
     ];
 

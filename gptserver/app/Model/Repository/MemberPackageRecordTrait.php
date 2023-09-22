@@ -6,7 +6,6 @@ use App\Http\Dto\MemberPackageDto;
 use App\Model\MemberPackageRecord;
 use Hyperf\Database\Model\Builder;
 use Hyperf\Database\Model\Model;
-
 trait MemberPackageRecordTrait
 {
     /**
@@ -19,7 +18,6 @@ trait MemberPackageRecordTrait
      */
     public static function createByPackageDto($userId, $packageId, MemberPackageDto $dto)
     {
-        return MemberPackageRecord::query()
-            ->create($dto->toRecordData($userId, $packageId));
+        return MemberPackageRecord::query()->create($dto->toRecordData($userId, $packageId));
     }
 }

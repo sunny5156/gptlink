@@ -4,7 +4,6 @@ namespace App\Model\Repository;
 
 use App\Http\Dto\ChatLogDto;
 use App\Model\ChatLog;
-
 trait ChatLogTrait
 {
     /**

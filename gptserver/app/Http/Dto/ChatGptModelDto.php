@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\ChatGptModel;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property int $user_id 用户id
@@ -23,12 +23,12 @@ use Cblink\Dto\Dto;
  */
 class ChatGptModelDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'user_id', 'icon', 'name', 'prompt', 'system', 'status', 'sort',
         'platform', 'desc', 'remark', 'source', 'type', 'verify_result', 'verify_data'
     ];
 
-    public function getFillableData()
+    public function getFillableData(): array
     {
         return [
             'user_id' => $this->getItem('user_id') ?? 0,
@@ -46,7 +46,7 @@ class ChatGptModelDto extends Dto
         ];
     }
 
-    public function getUpdateData()
+    public function getUpdateData(): array
     {
         return [
             'icon' => $this->getItem('icon'),

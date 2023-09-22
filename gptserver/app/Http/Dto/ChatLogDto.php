@@ -2,7 +2,7 @@
 
 namespace App\Http\Dto;
 
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property string $id
@@ -15,7 +15,7 @@ use Cblink\Dto\Dto;
  */
 class ChatLogDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'id',
         'user_id',
         'system',

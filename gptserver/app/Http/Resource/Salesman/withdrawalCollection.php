@@ -3,7 +3,7 @@
 namespace App\Http\Resource\Salesman;
 
 use App\Model\Withdraw;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class withdrawalCollection extends BaseCollection
 {

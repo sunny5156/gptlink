@@ -3,7 +3,7 @@
 namespace App\Http\Resource;
 
 use App\Model\MemberPackageRecord;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class MemberPackageRecordCollection extends BaseCollection
 {

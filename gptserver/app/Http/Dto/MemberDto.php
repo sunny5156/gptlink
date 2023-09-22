@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Member;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 use Hyperf\Utils\Str;
 
 /**
@@ -11,7 +11,7 @@ use Hyperf\Utils\Str;
  */
 class MemberDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'nickname',
         'avatar',
         'mobile',
@@ -20,7 +20,7 @@ class MemberDto extends Dto
         'account_type',
     ];
 
-    public function getData()
+    public function getData(): array
     {
         return [
             'code' => Str::random(),

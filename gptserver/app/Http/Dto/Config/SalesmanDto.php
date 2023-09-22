@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property bool $enable 是否开启分销
@@ -13,7 +13,7 @@ use Cblink\HyperfExt\Dto;
  */
 class SalesmanDto extends Dto implements ConfigDtoInterface
 {
-    protected $fillable = ['type', 'enable', 'open', 'rules', 'ratio'];
+    protected array $fillable = ['type', 'enable', 'open', 'rules', 'ratio'];
 
     /**
      * 默认数据

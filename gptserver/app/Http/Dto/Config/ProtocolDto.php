@@ -4,7 +4,7 @@ namespace App\Http\Dto\Config;
 
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property $title
@@ -12,7 +12,7 @@ use Cblink\Dto\Dto;
  */
 class ProtocolDto extends Dto implements ConfigDtoInterface
 {
-    protected $fillable = ['type', 'enable', 'title', 'agreement'];
+    protected array $fillable = ['type', 'enable', 'title', 'agreement'];
 
     /**
      * 默认数据

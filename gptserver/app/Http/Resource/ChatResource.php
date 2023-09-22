@@ -2,7 +2,7 @@
 
 namespace App\Http\Resource;
 
-use Cblink\HyperfExt\BaseResource;
+use Aimilink\HyperfExt\BaseResource;
 use Hyperf\Utils\Arr;
 
 class ChatResource extends BaseResource

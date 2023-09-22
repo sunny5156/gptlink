@@ -5,9 +5,7 @@ namespace App\Exception;
 use Hyperf\Constants\AbstractConstants;
 use Hyperf\Constants\Annotation\Constants;
 
-/**
- * @Constants
- */
+#[Constants]
 class ErrCode extends AbstractConstants
 {
     /**
@@ -42,12 +40,10 @@ class ErrCode extends AbstractConstants
      * @Message("服务器错误")
      */
     const SERVER_ERROR = 500;
-
     /**
      * @Message("数据库/redis链接失败")
      */
     const SERVER_CONNECTION_FAIL = 2002;
-
     /**
      * @Message("请求的资源不存在")
      */
@@ -68,7 +64,6 @@ class ErrCode extends AbstractConstants
      * @Message("未配置正确的apikey")
      */
     const SYSTEM_KEY_INVALID = 1003;
-
     /**
      * @Message("此功能未开放")
      */
@@ -81,22 +76,18 @@ class ErrCode extends AbstractConstants
      * @Message("此手机号已绑定其他微信，请更换手机号再进行绑定")
      */
     const USER_MOBILE_IS_BIND = 10002;
-
     /**
      * @Message("兑换码无效或已被使用")
      */
     const CDK_INVALID = 10003;
-
     /**
      * @Message("兑换码无效或已被使用")
      */
     const CDK_IS_EXPIRED = 10004;
-
     /**
      * @Message("兑换套餐失效，请联系客服更换")
      */
     const CDK_PACKAGE_NOT_FOUND = 10005;
-
     /**
      * @Message("系统未初始化完成，请先前往配置")
      */
@@ -141,7 +132,6 @@ class ErrCode extends AbstractConstants
      * @Message("您已是分销员，无需重复申请")
      */
     const MEMBER_IS_SALESMAN = 10108;
-
     /**
      * @Message("余额不足")
      */
@@ -181,5 +171,5 @@ class ErrCode extends AbstractConstants
     /**
      * @Message("获取七牛云文件信息失败")
      */
-    const MATERIAL_CATEGORY_FILE_INFO=40200;
+    const MATERIAL_CATEGORY_FILE_INFO = 40200;
 }

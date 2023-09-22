@@ -3,7 +3,7 @@
 namespace App\Http\Resource;
 
 use App\Model\Member;
-use Cblink\HyperfExt\BaseResource;
+use Aimilink\HyperfExt\BaseResource;
 
 /**
  * @property Member $resource

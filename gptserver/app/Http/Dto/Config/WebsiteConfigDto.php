@@ -3,12 +3,13 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
+// use Aimilink\HyperfExt\Dto;
 
 class WebsiteConfigDto extends Dto implements ConfigDtoInterface
 {
 
-	protected $fillable = [
+	protected array $fillable = [
 		'type', 'name', 'icp', 'web_logo', 'admin_logo', 'user_logo',
 	];
 

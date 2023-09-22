@@ -5,7 +5,7 @@ namespace App\Http\Dto;
 use App\Model\MemberPackage;
 use App\Model\Package;
 use Carbon\Carbon;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $code 标识码
@@ -17,7 +17,7 @@ use Cblink\HyperfExt\Dto;
  */
 class MemberPackageDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'status',
         'code',
         'name',
@@ -33,7 +33,7 @@ class MemberPackageDto extends Dto
      * @param $expiredAt
      * @return null|string
      */
-    public function getExpiredAt($expiredAt = null)
+    public function getExpiredAt($expiredAt = null): string
     {
         if ($this->expired_day <= 0) {
             return '2099-01-01';
@@ -50,7 +50,7 @@ class MemberPackageDto extends Dto
      * @param $userId
      * @return array
      */
-    public function toCreateData($userId)
+    public function toCreateData($userId): array
     {
         return [
             'user_id' => $userId,
@@ -70,7 +70,7 @@ class MemberPackageDto extends Dto
      * @param $packageId
      * @return array
      */
-    public function toRecordData($userId, $packageId)
+    public function toRecordData($userId, $packageId): array
     {
         return [
             'user_id' => $userId,

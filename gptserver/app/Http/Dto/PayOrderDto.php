@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Order;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $channel 支付渠道
@@ -11,11 +11,11 @@ use Cblink\HyperfExt\Dto;
  */
 class PayOrderDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'pay_type', 'channel', 'price', 'body', 'trade_type', 'user_id', 'trade_no',
     ];
 
-    public function toData()
+    public function toData(): array
     {
         // 微信参数
         if ($this->getItem('channel') == Order::CHANNEL_WECHAT) {
@@ -46,7 +46,7 @@ class PayOrderDto extends Dto
     /**
      * @return false|string
      */
-    public function getUserId()
+    public function getUserId(): string
     {
         return base64_decode($this->getItem('user_id'));
     }

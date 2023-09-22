@@ -3,7 +3,7 @@
 namespace App\Http\Dto;
 
 use App\Model\Task;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property int $user_id
@@ -15,11 +15,11 @@ use Cblink\Dto\Dto;
  */
 class TaskRecordDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'user_id', 'task_id', 'type', 'package_name', 'expired_day', 'num'
     ];
 
-    public function getFillableData()
+    public function getFillableData(): array
     {
         return [
             'user_id' => $this->getItem('user_id'),

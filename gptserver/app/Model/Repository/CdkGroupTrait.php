@@ -7,7 +7,6 @@ use App\Job\CreateCdkJob;
 use App\Model\CdkGroup;
 use Hyperf\Database\Model\Builder;
 use Hyperf\Database\Model\Model;
-
 trait CdkGroupTrait
 {
     /**
@@ -19,10 +18,8 @@ trait CdkGroupTrait
     {
         $cdkGroup = CdkGroup::query()->create($dto->createData());
         asyncQueue(new CreateCdkJob($cdkGroup));
-
         return $cdkGroup;
     }
-
     /**
      * 更新
      * @param CdkGroupDto $dto

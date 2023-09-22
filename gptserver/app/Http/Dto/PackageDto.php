@@ -4,7 +4,7 @@ namespace App\Http\Dto;
 
 use App\Model\Order;
 use App\Model\Package;
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 use Hyperf\Snowflake\IdGeneratorInterface;
 
 /**
@@ -12,7 +12,7 @@ use Hyperf\Snowflake\IdGeneratorInterface;
  */
 class PackageDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'name', 'code', 'show_name', 'sort', 'num', 'price', 'level', 'show',
     ];
 
@@ -44,7 +44,7 @@ class PackageDto extends Dto
         ];
     }
 
-    public function getUpdateData()
+    public function getUpdateData(): array
     {
         if ($this->getItem('code') == Package::CODE_NUM) {
             $expired_day = 0;

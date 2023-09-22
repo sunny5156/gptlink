@@ -3,7 +3,8 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
+// use Aimilink\Dto\Dto;
 
 /**
  * @property array $channel 渠道
@@ -19,7 +20,7 @@ class PaymentDto extends Dto implements ConfigDtoInterface
         self::TYPE_WECHAT => '微信支付',
     ];
 
-    protected $fillable = [
+    protected array $fillable = [
         'type', 'channel', 'offline',
     ];
 

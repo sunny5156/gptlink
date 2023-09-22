@@ -5,7 +5,7 @@ namespace App\Http\Control\Web;
 use App\Http\Request\Web\CdkExchangeRequest;
 use App\Http\Resource\PackageResource;
 use App\Model\Cdk;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class CdkController extends BaseController

@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 return [
     'http' => [
-        \Cblink\HyperfExt\Middleware\CorsMiddleware::class,
+        \Aimilink\HyperfExt\Middleware\CorsMiddleware::class,
         \Hyperf\Validation\Middleware\ValidationMiddleware::class,
     ],
 ];

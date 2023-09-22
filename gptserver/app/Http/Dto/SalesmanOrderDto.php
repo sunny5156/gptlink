@@ -3,15 +3,15 @@
 namespace App\Http\Dto;
 
 use App\Model\SalesmanOrder;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 class SalesmanOrderDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'order_id', 'ratio', 'order_price', 'user_id', 'status', 'custom_id',
     ];
 
-    public function toModel()
+    public function toModel(): array
     {
         $price = bcmul((string) $this->getItem('order_price'), bcdiv((string) abs($this->getItem('ratio')), '100', 2), 2);
 

@@ -7,7 +7,7 @@ use App\Http\Request\Admin\WithdrawAgreeRequest;
 use App\Http\Request\Admin\WithdrawRefuseRequest;
 use App\Http\Resource\Admin\WithdrawCollection;
 use App\Model\Withdraw;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
 class WithdrawController extends BaseController

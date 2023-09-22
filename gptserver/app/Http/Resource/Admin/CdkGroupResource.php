@@ -2,7 +2,7 @@
 
 namespace App\Http\Resource\Admin;
 
-use Cblink\HyperfExt\BaseResource;
+use Aimilink\HyperfExt\BaseResource;
 
 /**
  * @property $resource

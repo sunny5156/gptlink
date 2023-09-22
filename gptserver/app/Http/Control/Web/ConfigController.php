@@ -10,7 +10,7 @@ use App\Http\Dto\Config\WebsiteConfigDto;
 use App\Http\Dto\Config\PaymentDto;
 use App\Http\Dto\Config\ProtocolDto;
 use App\Model\Config;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\Utils\Arr;
 use Psr\Http\Message\ResponseInterface;
 

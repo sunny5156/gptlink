@@ -8,7 +8,7 @@ use App\Http\Resource\TaskRecordResource;
 use App\Http\Resource\TaskResource;
 use App\Model\Task;
 use App\Model\TaskRecord;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class TaskController extends BaseController
 {

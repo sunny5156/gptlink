@@ -4,7 +4,7 @@ namespace App\Http\Control\Admin;
 
 use App\Http\Resource\Admin\OrderCollection;
 use App\Model\Order;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class OrderController extends BaseController
 {

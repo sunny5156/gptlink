@@ -16,7 +16,7 @@ use App\Model\MemberOauth;
 use App\Model\MemberPackage;
 use App\Model\MemberPackageRecord;
 use App\Model\Package;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 

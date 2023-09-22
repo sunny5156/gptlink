@@ -23,7 +23,7 @@ class OrderPaidListener implements ListenerInterface
      * @param OrderPaidEvent $event
      * @return void
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         $order = $event->order;
 

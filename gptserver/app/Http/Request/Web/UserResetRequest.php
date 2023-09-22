@@ -3,7 +3,7 @@
 namespace App\Http\Request\Web;
 
 use App\Http\Request\BaseFormRequest;
-use Cblink\HyperfExt\Rules\MobileRule;
+use Aimilink\HyperfExt\Rules\MobileRule;
 use Hyperf\Validation\Rule;
 
 class UserResetRequest extends BaseFormRequest

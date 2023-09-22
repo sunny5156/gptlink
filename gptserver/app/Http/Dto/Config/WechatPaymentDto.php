@@ -3,7 +3,7 @@
 namespace App\Http\Dto\Config;
 
 use App\Model\Config;
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property integer $type 类型
@@ -13,7 +13,7 @@ use Cblink\HyperfExt\Dto;
  */
 class WechatPaymentDto extends Dto implements ConfigDtoInterface
 {
-	protected $fillable = [
+	protected array $fillable = [
 		'type', 'mch_id', 'key', 'appid'
 	];
 

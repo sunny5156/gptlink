@@ -7,7 +7,7 @@ use App\Http\Resource\Admin\SalesmanResource;
 use App\Http\Resource\Admin\SalesmanUserCollection;
 use App\Model\Member;
 use App\Model\SalesmanOrder;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class SalesmanController extends BaseController
 {

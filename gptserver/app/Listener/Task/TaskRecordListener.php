@@ -29,7 +29,7 @@ class TaskRecordListener implements ListenerInterface
      * @param TaskRecordEvent $event
      * @return void
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         /** @var Task $task */
         $task = $event->task;

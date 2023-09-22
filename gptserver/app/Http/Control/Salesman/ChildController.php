@@ -4,7 +4,7 @@ namespace App\Http\Control\Salesman;
 
 use App\Http\Resource\Salesman\CustomCollection;
 use App\Model\Member;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class ChildController extends BaseController
 {

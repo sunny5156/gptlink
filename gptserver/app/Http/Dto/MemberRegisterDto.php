@@ -2,7 +2,7 @@
 
 namespace App\Http\Dto;
 
-use Cblink\HyperfExt\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $mobile                 注册的手机号
@@ -11,7 +11,7 @@ use Cblink\HyperfExt\Dto;
  */
 class MemberRegisterDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'mobile',
         'share_openid',
         'source',

@@ -2,7 +2,7 @@
 
 namespace App\Http\Dto;
 
-use Cblink\Dto\Dto;
+use Aimilink\Dto\Dto;
 
 /**
  * @property string $name 分组名称
@@ -13,7 +13,7 @@ use Cblink\Dto\Dto;
  */
 class CdkGroupDto extends Dto
 {
-    protected $fillable = [
+    protected array $fillable = [
         'name', 'num', 'package_id', 'remark'
     ];
 
@@ -30,7 +30,7 @@ class CdkGroupDto extends Dto
         ];
     }
 
-    public function updateData()
+    public function updateData(): array
     {
         return [
             'name' => $this->getItem('name'),

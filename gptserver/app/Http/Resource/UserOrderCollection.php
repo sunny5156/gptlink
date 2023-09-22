@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Resource;
 
 use App\Model\Order;
-use Cblink\HyperfExt\BaseCollection;
+use Aimilink\HyperfExt\BaseCollection;
 
 class UserOrderCollection extends BaseCollection
 {

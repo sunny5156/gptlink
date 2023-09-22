@@ -11,7 +11,7 @@ use App\Http\Resource\Admin\CdkListCollection;
 use App\Http\Service\ExcelService;
 use App\Model\Cdk;
 use App\Model\CdkGroup;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class CdkController extends BaseController
 {

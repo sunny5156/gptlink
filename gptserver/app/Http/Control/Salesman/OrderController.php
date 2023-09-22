@@ -4,7 +4,7 @@ namespace App\Http\Control\Salesman;
 
 use App\Http\Resource\Salesman\SalesmanOrderCollection;
 use App\Model\SalesmanOrder;
-use Cblink\HyperfExt\BaseController;
+use Aimilink\HyperfExt\BaseController;
 
 class OrderController extends BaseController
 {
