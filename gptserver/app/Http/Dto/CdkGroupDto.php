@@ -2,7 +2,8 @@
 
 namespace App\Http\Dto;
 
-use Aimilink\Dto\Dto;
+// use Aimilink\Dto\Dto;
+use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $name 分组名称

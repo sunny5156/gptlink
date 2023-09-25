@@ -4,7 +4,6 @@ namespace App\Http\Dto\Config;
 
 use App\Model\Config;
 use Aimilink\HyperfExt\Dto;
-// use Aimilink\Dto\Dto;
 
 /**
  * @property array $channel 渠道

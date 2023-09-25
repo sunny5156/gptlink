@@ -4,6 +4,7 @@ namespace App\Http\Dto;
 
 use App\Model\ChatGptModel;
 use Aimilink\Dto\Dto;
+// use Aimilink\HyperfExt\Dto;
 
 /**
  * @property int $user_id 用户id

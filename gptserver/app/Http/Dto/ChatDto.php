@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Aimilink\Dto\Dto;
 use Gioni06\Gpt3Tokenizer\Gpt3Tokenizer;
 use Psr\SimpleCache\InvalidArgumentException;
+// use Aimilink\HyperfExt\Dto;
 
 /**
  * @property string $model 使用的模型

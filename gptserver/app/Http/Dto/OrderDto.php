@@ -5,6 +5,7 @@ namespace App\Http\Dto;
 use App\Model\Order;
 use Aimilink\Dto\Dto;
 use Hyperf\Snowflake\IdGeneratorInterface;
+// use Aimilink\HyperfExt\Dto;
 
 /**
  *

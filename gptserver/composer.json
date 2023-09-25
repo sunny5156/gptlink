@@ -14,11 +14,12 @@
     "require": {
         "php": "^8.0|^8.1",
         "96qbhy/hyperf-auth": "^3.0",
+        "aimilink/hyperf-helper": "^3.0.3",
+        "aimilink/hyperf-socialite": "3.0.4",
+        "aimilink/laravel-dto": "^3.0",
+        "aimilink/model-library": "^3.0",
         "cblink-service/idaas-sdk": "^0.4.5",
         "cblink/gptlink-sdk": "^1.0",
-        "aimilink/hyperf-helper": "^3.0.3",
-        "aimilink/laravel-dto": "^3.0.2",
-        "aimilink/model-library": "^3.0",
         "cblink/monolog-handler": "^3.0",
         "doctrine/cache": "^1.11",
         "doctrine/dbal": "^3.0",
@@ -50,7 +51,6 @@
         "phpoffice/phpspreadsheet": "^1.28",
         "qiniu/php-sdk": "^7.8",
         "ramsey/uuid": "^4.2",
-        "aimilink/hyperf-socialite": "3.0.4",
         "w7corp/easywechat": "^6.11"
     },
     "require-dev": {

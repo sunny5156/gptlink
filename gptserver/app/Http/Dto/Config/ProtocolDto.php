@@ -5,6 +5,7 @@ namespace App\Http\Dto\Config;
 
 use App\Model\Config;
 use Aimilink\Dto\Dto;
+// use Aimilink\HyperfExt\Dto;
 
 /**
  * @property $title
